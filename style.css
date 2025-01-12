@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #E8F0FE;
+  --secondary-color: #2C3E50;
+  --accent-color: #3498DB;
+  --accent-light: #85C1E9;
+  --error-color: #E74C3C;
+  --success-color: #2ECC71;
+  --border-color: #BDC3C7;
+  --hover-color: #2980B9;
+  --text-primary: #34495E;
+  --text-secondary: #7F8C8D;
+  --bg-gradient-1: #F5F7FA;
+  --bg-gradient-2: #E8F0FE;
+  --input-bg: #FFFFFF;
+  --shadow-color: rgba(52, 152, 219, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+  padding: 20px;
+  animation: gradientBG 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.registration-container {
+  background: var(--card-bg);
+  margin: auto;
+  padding: 30px;
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+.registration-container .registration-header {
+  padding: 10px 0 25px 0;
+  text-align: center;
+}
+
+.registration-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGradient 3s ease infinite;
+}
+
+@keyframes titleGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.registration-header .divider {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+  margin: 15px auto 0;
+  border-radius: 2px;
+  animation: width 0.5s ease-in-out;
+}
+
+@keyframes width {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+.registration-body .registration-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.registration-box .input-box {
+  position: relative;
+  width: calc(50% - 10px);
+  margin-bottom: 15px;
+}
+
+.registration-box .input-box label,
+.inputfield label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: block;
+  transform-origin: left top;
+  transition: all 0.2s ease;
+}
+
+.input-field, .input, .textarea {
+  width: 100%;
+  height: 45px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  padding: 0 15px;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus, .input:focus, .textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--shadow-color);
+  transform: scale(1.01);
+  outline: none;
+}
+
+.input-field:hover, .input:hover, .textarea:hover {
+  border-color: var(--accent-light);
+}
+
+.textarea {
+  min-height: 120px;
+  padding: 15px;
+  resize: none;
+}
+
+.inputfield {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Radio buttons styling */
+.inputfield input[type="radio"] {
+  position: relative;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.inputfield input[type="radio"]::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.inputfield input[type="radio"]:checked::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.inputfield input[type="radio"] + label {
+  margin-right: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Custom select styling */
+.custom_select {
+  position: relative;
+  width: 100%;
+}
+
+.custom_select select {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  font-size: 14px;
+  appearance: none;
+  background: #fff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 15px center;
+  background-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom_select select:hover {
+  border-color: var(--accent-light);
+}
+
+.custom_select select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--shadow-color);
+  outline: none;
+}
+
+/* File upload styling */
+input[type="file"] {
+  padding: 10px;
+  background: linear-gradient(45deg, var(--bg-gradient-1), var(--bg-gradient-2));
+  border: 2px dashed var(--accent-light);
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background: linear-gradient(45deg, var(--bg-gradient-2), var(--bg-gradient-1));
+  border-color: var(--accent-color);
+}
+
+/* Checkbox styling */
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.terms input[type="checkbox"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+
+.terms input[type="checkbox"]::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 2px;
+  left: 7px;
+  width: 4px;
+  height: 8px;
+  border-style: solid;
+  border-color: white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.terms input[type="checkbox"]:checked {
+  color: white;
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+}
+
+.terms input[type="checkbox"]:checked::before {
+  opacity: 1;
+  animation: check 200ms ease-in;
+}
+
+@keyframes check {
+  0% { transform: scale(0) rotate(45deg); }
+  100% { transform: scale(1) rotate(45deg); }
+}
+
+.terms p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Button styling */
+.registration-body .btn-register {
+  background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin: 10px auto;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-register:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-register:hover:before {
+  left: 100%;
+}
+
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px var(--shadow-color);
+}
+
+.btn-register:active {
+  transform: translateY(1px);
+}
+
+/* Footer styling */
+.registration-container .registration-footer {
+  text-align: center;
+  padding: 25px 0 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 30px;
+}
+
+.registration-footer h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.registration-footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.registration-footer a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+/* Error state styling */
+.input-field.error,
+.input.error,
+.textarea.error {
+  border-color: var(--error-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Success state styling */
+.input-field.success,
+.input.success,
+.textarea.success {
+  border-color: var(--success-color);
+}
+
+/* Phone number field styling */
+#phone-codes {
+  width: 80px;
+  margin-right: 10px;
+}
+
+#phone-number {
+  width: calc(100% - 90px);
+}
+
+/* File size text styling */
+#file-size {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-left: 5px;
+  display: inline-block;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .registration-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .registration-box .input-box {
+    width: 100%;
+  }
+
+  .registration-header h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .registration-container {
+    padding: 15px;
+  }
+
+  .registration-header h2 {
+    font-size: 20px;
+  }
+
+  .inputfield {
+    margin-bottom: 15px;
+  }
+
+  .terms {
+    margin: 20px 0;
+  }
+
+  .registration-body .btn-register {
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+}
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-color);
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.footer-text {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.separator {
+  color: var(--accent-color);
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.author {
+  background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  position: relative;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Responsive footer adjustment */
+@media screen and (max-width: 480px) {
+  .footer-content {
+      font-size: 14px;
+      gap: 8px;
+  }
+}
