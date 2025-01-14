@@ -18,7 +18,8 @@ A modern and elegant **Student Registration Form** designed with **HTML5** and *
 - `index.html`: The main structure of the form.
 - `style.css`: A fully responsive stylesheet with reusable variables and animations.
 
-![Screenshot 2025-01-06 155310](https://github.com/user-attachments/assets/41d8e5d5-ee92-4c6d-8248-8c36a5a19e72)
+<img src=""C:\Users\ACER\Downloads\Responsive Registration Form using HTML and CSS main\Responsive-Registration-Form-using-HTML-and-CSS-main\output\Screenshot 2025-01-06 155310.png"" alt="Output" width="500" />
+
 
 🚀 **Get Started**:
 Simply clone the repository and open the `index.html` file in your browser to explore the responsive design in action.
