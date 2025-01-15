@@ -21,11 +21,11 @@ A modern and elegant **Student Registration Form** designed with **HTML5** and *
 <img src="output/1.png" alt="description" width="700" height="500">
 <img src="output/2.png" alt="description" width="700" height="500">
 <img src="output/3.png" alt="description" width="700" height="300">
-<img src="output/4.png" alt="description" width="700" height="300">
-<img src="output/5.png" alt="description" width="700" height="300">
-<img src="output/6.png" alt="description" width="700" height="300">
-<img src="output/7.png" alt="description" width="700" height="300">
-<img src="output/8.png" alt="description" width="700" height="300">
+<img src="output/4.png" alt="description" width="700" height="400">
+<img src="output/5.png" alt="description" width="700" height="400">
+<img src="output/6.png" alt="description" width="700" height="400">
+<img src="output/7.png" alt="description" width="700" height="400">
+<img src="output/8.png" alt="description" width="700" height="400">
 
 🚀 **Get Started**:
 Simply clone the repository and open the `index.html` file in your browser to explore the responsive design in action.
