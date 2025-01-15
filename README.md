@@ -18,9 +18,9 @@ A modern and elegant **Student Registration Form** designed with **HTML5** and *
 - `index.html`: The main structure of the form.
 - `style.css`: A fully responsive stylesheet with reusable variables and animations.
 
-<img src="output/1.png" alt="description" width="500" height="500">
-<img src="output/2.png" alt="description" width="500" height="500">
-<img src="output/3.png" alt="description" width="500" height="500">
+<img src="output/1.png" alt="description" width="700" height="500">
+<img src="output/2.png" alt="description" width="700" height="500">
+<img src="output/3.png" alt="description" width="700" height="300">
 <img src="output/4.png" alt="description" width="500" height="500">
 <img src="output/5.png" alt="description" width="500" height="500">
 <img src="output/6.png" alt="description" width="500" height="500">
