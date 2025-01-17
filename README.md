@@ -22,8 +22,8 @@ A modern and elegant **Student Registration Form** designed with **HTML5** and *
 <img src="output/2.png" alt="description" width="700" height="500">
 <img src="output/3.png" alt="description" width="700" height="300">
 
-**Features:
-<img src="output/4.png" alt="description" width="600" height="400">
+**Features: <br>
+<img src="output/4.png" alt="description" width="700" height="300">
 <img src="output/5.png" alt="description" width="700" height="300">
 <img src="output/6.png" alt="description" width="700" height="300">
 <img src="output/7.png" alt="description" width="700" height="300">
